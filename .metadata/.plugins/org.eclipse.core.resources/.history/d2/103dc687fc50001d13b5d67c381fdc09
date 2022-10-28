@@ -1,0 +1,16 @@
+package com.microservices.springcloudconfigserver;
+
+import java.math.BigDecimal;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class CurrencyExchnge {
+
+	private Long id;
+	private String from;
+	private String to;
+	private BigDecimal conversionMultiple;
+	
+	
+}

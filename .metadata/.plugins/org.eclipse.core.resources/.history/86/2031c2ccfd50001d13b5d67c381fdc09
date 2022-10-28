@@ -1,0 +1,17 @@
+package com.microservices.springcloudconfigserver;
+
+import java.math.BigDecimal;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CurrencyExchngeController {
+
+	@GetMapping("currency-exchange/from/{from}/to/{to}")
+	public CurrencyExchnge retrieveExchangeValue(@PathVariable String from,@PathVariable String to) {
+		CurrencyExchnge currency = new CurrencyExchnge(1000l, from, to, BigDecimal.valueOf(50),"8080");
+		return currency;
+	}
+}
