@@ -12,9 +12,6 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class CurrencyConversionController {
-	
-	@Autowired
-	CurrencyExchangeProxy proxy;
 
 	@GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion calculateCurrencyConversion(
@@ -39,6 +36,9 @@ public class CurrencyConversionController {
 				currencyConversion.getEnvironment());
 	}
 	
+	@Autowired
+	CurrencyExchangeProxy proxy;
+	
 	@GetMapping("/currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion calculateCurrencyConversionFeign(
 			@PathVariable String from,
@@ -56,4 +56,3 @@ public class CurrencyConversionController {
 
 
 }
-

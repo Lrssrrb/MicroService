@@ -1,5 +1,0 @@
-package com.microservices.springcloudconfigserver;
-
-public class CurrencyExchngeController {
-
-}

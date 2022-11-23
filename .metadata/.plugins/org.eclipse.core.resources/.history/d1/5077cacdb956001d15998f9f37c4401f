@@ -1,0 +1,14 @@
+spring.application.name=naming-server
+server.port=8761
+
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+#management.endpoints.web.exposure.include=health,info
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+#eureka.client.serviceUrl.defaultZone = ${EUREKA_SERVICE_URL:"https://localhost:8761}/eureka/"
+#eureka.client.service-url = http://localhost:8761/eureka
+#eureka.instance.hostname=localhost
+
+#eureka.
+#management.endpoints.web.base-path=
+management.endpoints.web.exposure.include=*
